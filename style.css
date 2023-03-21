@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+/* || RESET */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+input, button, textarea {
+    font: inherit;
+}
+
+/* || VARIABLE */
+:root {
+    /* FONTS */
+    --FF: "Overpass", sans-serif;
+    --FS: 14px;
+
+    /* COLORS */
+    --BGCOLOR: hsl(228, 11%, 9%);
+    --MAIN-GRADIENT: linear-gradient(hsl(220, 20%, 15%), hsl(215, 27%, 12%));
+    --IC-COLOR: hsl(210, 19%, 18%);;
+    --P-COLOR: hsl(217, 12%, 63%);
+    --H1-COLOR: hsl(0, 0%, 100%);
+    --BTN-COLOR: hsl(25, 97%, 53%);
+
+    /* color: hsl(220, 6%, 48%); */
+}
+
+
+/* GENERAL STYLE */
+html {
+    font-family: var(--FF);
+    font-size: var(--FS);
+    font-weight: 400;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--BGCOLOR);
+    display: grid;
+    place-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* STYLING */
+
+.main {
+    width: 320px;
+    height: 360px;
+    background-image: var(--MAIN-GRADIENT);
+    border-radius: 14px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%
+
+}
+
+.rating__img {
+    width: 45px;
+    height: 45px;
+    padding: 1rem;
+    background-color: var(--IC-COLOR);
+    border-radius: 50%;
+}
+
+.rating__h1{
+    color: var(--H1-COLOR);
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.rating__p {
+    color: var(--P-COLOR);
+    font-size: 1rem;
+}
+
+.options {
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options span {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: var(--IC-COLOR);
+    text-align: center;
+    padding: 1rem;  
+    color: var(--P-COLOR)
+}
+
+.rating__btn {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--BTN-COLOR);
+    color: var(--H1-COLOR);
+    border-radius: 2rem;
+    display: grid;
+    place-content: center;
+}
+
+span:hover {
+    background-color: var(--BTN-COLOR);
+    color: var(--H1-COLOR);
+}
+
+span:active {
+    background-color: var(--P-COLOR);
+    color: var(--H1-COLOR);
+}
+
+
+button:active {
+    background-color: var(--H1-COLOR);
+    color: var(--BTN-COLOR);
+}
+
+.footer {
+    margin-top: 1rem;
+    display: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(227, 6%, 56%);
+}
