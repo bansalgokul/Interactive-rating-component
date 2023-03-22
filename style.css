@@ -30,8 +30,6 @@ input, button, textarea {
     --P-COLOR: hsl(217, 12%, 63%);
     --H1-COLOR: hsl(0, 0%, 100%);
     --BTN-COLOR: hsl(25, 97%, 53%);
-
-    /* color: hsl(220, 6%, 48%); */
 }
 
 
@@ -50,15 +48,32 @@ body {
     place-content: center;
 }
 
-.hidden {
-    display: none;
-}
-
 p {
     line-height: 1.5;
 }
 
-/* STYLING */
+
+/* || UTILITY CLASS */
+
+.active {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.unselected {
+    background-color: var(--IC-COLOR);
+    color: var(--P-COLOR)
+}
+.selected {
+    background-color: var(--P-COLOR);
+    color: var(--H1-COLOR);
+}
+
+
+/* || STYLING */
 
 .main {
     width: 320px;
@@ -67,14 +82,13 @@ p {
     border-radius: 14px;
 }
 
-.rating {
-    display: flex;
+.rating, .thank-you {
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-around;
     padding: 1.5rem;
     width: 100%;
     height: 100%
-
 }
 
 .rating__img {
@@ -85,13 +99,14 @@ p {
     border-radius: 50%;
 }
 
-.rating__h1{
+.rating__h1, .thank__h1{
     color: var(--H1-COLOR);
     font-weight: 700;
     font-size: 1.75rem;
+    letter-spacing: 0.075em;
 }
 
-.rating__p {
+.rating__p, .thank__p {
     color: var(--P-COLOR);
     font-size: 1rem;
 }
@@ -107,12 +122,16 @@ p {
 .options span {
     height: 45px;
     width: 45px;
-    border-radius: 50%;
-    background-color: var(--IC-COLOR);
+    border-radius: 50%;  
     text-align: center;
-    padding: 1rem;  
-    color: var(--P-COLOR)
+    padding: 1rem;    
 }
+.r:hover {
+    background-color: var(--BTN-COLOR);
+    color: var(--H1-COLOR);
+}
+
+
 
 .rating__btn {
     width: 100%;
@@ -122,17 +141,9 @@ p {
     border-radius: 2rem;
     display: grid;
     place-content: center;
+    border: none;
 }
 
-span:hover {
-    background-color: var(--BTN-COLOR);
-    color: var(--H1-COLOR);
-}
-
-span:active {
-    background-color: var(--P-COLOR);
-    color: var(--H1-COLOR);
-}
 
 
 button:active {
@@ -140,9 +151,31 @@ button:active {
     color: var(--BTN-COLOR);
 }
 
+
+.thank-you {
+    align-items: center;
+}
+
+.thank__img {
+    width: 162px;
+}
+
+.thank__span {
+    color: var(--BTN-COLOR);
+    background-color: var(--IC-COLOR);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.thank__p {
+    text-align: center;
+}
+
+
+/* ||FOOTER */
 .footer {
     margin-top: 1rem;
-    display: none;
+    color: var(--P-COLOR);
 }
 
 .attribution {
