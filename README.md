@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/bansalgokul/Interactive-rating-component)
-- Live Site URL: [Add live site URL here](https://bansalgokul.github.io/Interactive-rating-component/)
+- Solution URL: [Github](https://github.com/bansalgokul/Interactive-rating-component)
+- Live Site URL: [Live Page](https://bansalgokul.github.io/Interactive-rating-component/)
 
 ## My process
 
